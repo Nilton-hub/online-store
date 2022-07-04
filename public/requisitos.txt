@@ -1,0 +1,13 @@
+Desenvolve aplicação PHP:
+
+obrigatório ter no mínimo 3 tabelas;
+
+Seja em MVC;
+
+Possua uma área privada uso de login obrigatório.
+
+Mysql para o banco de dados
+
+Pode utilizar um projeto que já tenha pronto, eu já tenho um parecido é só modificar se preferir.
+
+Skills: PHP, MySQL, HTML, Website Design, CSS3

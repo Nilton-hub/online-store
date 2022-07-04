@@ -1,0 +1,44 @@
+h2 {
+    color: #C2B3FE;
+}
+
+div.border {
+    border-bottom: 1px solid rgba(80, 80, 150, .4);
+}
+
+.no-results-img {
+    display: block;
+    max-width: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav.paginator {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+a.paginator_item, span.paginator_item {
+    border: 1px solid rgba(255, 255, 255, .5);
+    color: #f8f8f9;
+    width: 2em;
+    height: 2em;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 5px rgba(255, 255, 255, .05);
+}
+
+span.paginator_active {
+    background: #C2B3FE;
+    border: none;
+}
+
+nav.paginator .paginator_item:first-child, nav.paginator .paginator_item:last-child {
+    border-radius: 50%;
+}

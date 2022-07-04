@@ -1,0 +1,99 @@
+@media (min-width: 320px) {
+    main.main-content {
+        margin: auto;
+    }
+    form.form div {
+        height: 3em !important;
+    }
+
+    form.form.form-login {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .form-login label:not([for="input-remember"]) {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        z-index: 2;
+        font-size: 1.2em;
+    }
+
+    .form-login .icon-simbol-left, .icon-simbol-right {
+        position: absolute;
+        z-index: 2;
+        color: #757575;
+        top: 13px;
+        left: 6px;
+    }
+
+    .form-login input.text {
+        padding-left: 36px;
+        height: 100%;
+    }
+
+    .icon-simbol-right {
+        position: absolute;
+        right: 6px;
+        top: 10px;
+        left: auto;
+        cursor: pointer;
+    }
+
+    #input-remember {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    form p.form__auth {
+        display: block;
+    }
+    
+    #check-animated {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        background-color: #eee;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    #check-animated::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 50%;
+        margin: 5px;
+        transition: all .2s ease-in-out;
+        z-index: 2;
+    }
+
+    #input-remember:checked + #check-animated::before {
+        transform: translateX(30px);
+        background: yellowgreen;
+    }
+
+    #input-remember:checked + #check-animated {
+        box-shadow: 2px solid red;
+        background: #ccc;
+    }
+}
+
+@media (min-width: 768px) {
+    form.form.form-login {
+        width: 40%;
+    }
+    
+    .icon-simbol-right {
+        top: 13px;
+    }
+    
+    form p.form__auth {
+        display: flex;
+        justify-content: space-between;
+    }    
+}

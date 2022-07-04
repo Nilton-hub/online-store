@@ -1,0 +1,130 @@
+@keyframes removed {
+    to {
+        opacity: 1;
+        display: block;
+    }
+    from {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.removed {
+    animation: removed .36s ease-in-out 0s 1 normal both;
+}
+
+.rotate90 {
+    transform: rotate(90deg);
+}
+
+.user-profile {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 5px 1px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.user-profile__title {
+    background: rgba(144, 238, 144, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile h2 {
+    margin: 0;
+}
+
+#btn-edit {
+    text-decoration: none;
+    background-color: hsl(120, 88%, 55%);
+    padding: 5px 10px;
+    border-radius: 3px;
+    letter-spacing: .3px;
+    color: #fff;
+    transition: .3s;
+}
+
+#btn-edit:hover {
+    background: lightgreen;
+}
+
+.user-profile__data {
+    background: rgba(50, 50, 50, 0.5);
+    padding: 10px 20px;
+}
+
+.user-profile__data div {
+    margin: 10px 0;
+}
+
+div.confirm div button {
+    font-size: 1.1em;
+    letter-spacing: .5px;
+}
+
+.posts {
+    margin: 20px 0;
+}
+
+.posts h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.product {
+    margin: 0 auto;
+}
+
+.user-profile .more {
+    cursor: pointer;
+}
+
+@media (min-width: 320px) {
+    .more {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .change-password {
+        padding: 20px;
+        background: rgba(50, 50, 50, 0.5);
+    }
+
+    .change-password label {
+        display: block;
+    }
+
+    .change-password input {
+        width: 100%;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, .2);
+        border: none;
+        box-sizing: border-box;
+        border-radius: 3px;
+        margin: 4px 0 12px 0;
+        color: #f8f8f9;
+    }
+    
+    .change-password button {
+        background: #FFD600;
+        border-radius: 4px;
+        padding: 8px 24px;
+        font-weight: bold;
+        color: #212121;
+        transition: .25s;
+    }
+
+    .user-profile p {
+        margin: 20px 40px;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .change-password input {
+        width: 50%;
+        padding: 8px;
+    }
+}

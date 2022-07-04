@@ -1,0 +1,12 @@
+main {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.error-ops {
+    font-size: 6.5em;
+    color: rgb(236, 72, 72);
+    font-weight: normal;
+    font-family: 'Roboto-light';
+    margin: 0;
+}

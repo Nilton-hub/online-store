@@ -1,0 +1,48 @@
+@media (min-width: 320px) { 
+    form.form div {
+        height: 3em !important;
+    }
+
+    form.form.form-login {
+        width: 80%;
+    }
+
+    .form-login label:not([for="input-remember"]) {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        z-index: 2;
+        font-size: 1.2em;
+    }
+
+    .form-login .icon-simbol-left, .icon-simbol-right {
+        position: absolute;
+        z-index: 2;
+        color: #757575;
+        top: 13px;
+        left: 6px;
+    }
+
+    .form-login input.text {
+        padding-left: 36px;
+        height: 100%;
+    }
+
+    .icon-simbol-right {
+        position: absolute;
+        right: 6px;
+        top: 10px;
+        left: auto;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) {
+    form.form.form-login {
+        width: 40%;
+    }
+    
+    .icon-simbol-right {
+        top: 13px;
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "niltonduarte/loja-online",
+    "description": "Uma aplicação onde os usuários poderão comprar e vender produtos de outros usuários",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nilton Duarte",
+            "email": "tvirapegubeco@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "public\\": "public/",
+            "src\\": "src/"
+        },
+        "files": [
+            "src/functions.php",
+            "src/config.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "coffeecode/uploader":"1.0.*",
+        "coffeecode/router":"1.0.*",
+        "coffeecode/paginator":"1.0.*",
+        "coffeecode/datalayer":"1.1.*",
+        "coffeecode/cropper":"1.3.*",
+        "league/plates": "^3.4",
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

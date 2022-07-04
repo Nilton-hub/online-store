@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/icons/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/media-queries.css">
+    <link rel="stylesheet" href="../assets/styles/login.css">
+    <title>Loja de Produtos Online</title>
+</head>
+<body>
+<header class="main-header">
+    <form action="" class="form-search">
+        <input type="search" name="" placeholder="pesquisar" id="">
+        <button><i class="fas fa-search"></i></button>
+    </form>
+    <h1>Fazer Login</h1>
+    <nav class="nav">
+        <button class="btn-menu">
+            <span id="menu-hamburger"></span>
+        </button>
+        <ul class="">
+            <li>
+                <a href="#">Publicar Produto</a>
+                <div class="underline-hover"></div>
+            </li>
+            <li>
+                <a href="#">Entrar <i class="fas fa-sign-in-alt"></i></a>
+                <div class="underline-hover"></div>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main-content">
+    <p class="container">Informe os seus dados e clique em entrar para acessar a sua conta.</p>
+    <form class="form form-login" method="post" action="javascript:void(0)">
+        <div>
+            <input type="email" name="email" class="text" id="input-email">
+            <i class="fas fa-envelope-square icon-simbol-left"></i>
+            <label for="input-email">Seu email:</label>
+            <i class="errorIcon"></i>
+        </div>
+        <div>
+            <input type="password" name="password" class="text" id="input-password">
+            <i class="fas fa-lock icon-simbol-left"></i>
+            <label for="input-password">Sua Senha:</label>
+            <span class="icon-simbol-right"><i class="fas fa-eye-slash" id="iconEye"></i></span> <!-- OK -->
+            <i class="errorIcon"></i>
+        </div>
+        <div class="remember">
+            <input type="checkbox" name="remember" id="input-remember">
+            <label for="input-remember">Lembrar dados de login:</label>
+            <i class="errorIcon"></i>
+        </div>
+        <p>Ainda não tem conta? <a href="">Cadastre-se de graça.</a></p>
+        <div class="flex">
+            <input type="submit" value="Entrar">
+            <input type="reset" value="Limpar os Campos">
+        </div>
+    </form>
+</main>
+<footer class="main-footer">
+    <div class="footer-content">
+        <p class="copy">&copy; 2020-2021 - Criado e Editado por Nilton Duarte</p>
+        <ul class="contact-list">
+            <li><a href="https://www.facebook.com/nilton.duartte100/" alt="" title="" target="_blank">
+                <i class="fab fa-facebook" style="font-size: 1.5em; display: block; text-align: center; margin: auto;"></i>
+                <p>Página do Facebook</p>
+            </a></li>
+            <li><a href="https://instagram.com/n.i.l.t.o.n.1" alt="" title="" target="_blank">
+                <i class="fab fa-instagram-square" style="font-size: 1.5em; display: block; text-align: center; margin: auto;"></i>
+                <p>@n.i.l.t.o.n.1</p>
+            </a></li>
+            <li><a href="mailto:tvirapegubeco@gmail.com" alt="" title="" target="_blank">
+                <i class="fas fa-envelope-square" style="font-size: 1.5em; display: block; text-align: center; margin: auto;"></i>
+                <p>tvirapegubeco@gmail.com</p>
+            </a></li>
+            <li><a href="https://wa.me/5586999878575" alt="" title="" target="_blank">
+                <i class="fab fa-whatsapp-square" style="font-size: 1.5em; display: block; text-align: center; margin: auto;"></i>
+                <p>(86) 9 99878575</p>
+            </a></li>
+        </ul>
+    </div>
+</footer>
+<script src="../assets/icons/fontawesome-free-5.15.4-web/js/all.js"></script>
+<script src="../assets/scripts/script.js"></script>
+<script>
+    document.querySelector('button.btn-menu').addEventListener('click', evt => {
+        document.querySelector('nav.nav ul').classList.toggle('slide-down');
+        document.querySelector('nav.nav ul').classList.toggle('slide-up');
+    });
+
+    inputList.forEach((value, index) => {
+        let id = value.getAttribute('id');
+        let label = document.querySelector(`[for=${id}]:not([for="input-remember"])`);
+            value.addEventListener('focus', evt => {
+                label.classList.add('labelIn');
+                label.classList.remove('labelOut');
+                value.setAttribute('placeholder', `Digite...`);
+                
+                switch (evt.target.id) {
+                    case 'input-email':
+                        value.setAttribute('placeholder', `Informe o seu email`);
+                    break;
+                    case 'input-password':
+                        value.setAttribute('placeholder', `Informe a sua senha`);
+                    break;
+                default:
+                    console.log(evt.target.id);
+                }
+            });
+        
+            value.addEventListener('blur', evt => {
+            value.setAttribute('placeholder', ``)
+
+            if (value.value.length === 0) {
+                label.classList.remove('labelIn');
+                label.classList.add('labelOut');
+            } else value.style.outline = 'none';
+        });
+    });
+
+    const iconEye = document.querySelector('span.icon-simbol-right');
+    let showPass = true;
+    const toggleEye = (evt) => {
+        const inputPass = document.querySelector('#input-password');
+        if (showPass) {
+            iconEye.innerHTML = `<i class="fas fa-eye"></i>`;
+            inputPass.setAttribute('type', 'text');
+            showPass = false;
+        } else {
+            iconEye.innerHTML = `<i class="fas fa-eye-slash" id="iconEye"></i>`;
+            inputPass.setAttribute('type', 'password');
+            showPass = true;
+        }
+    };
+    iconEye.addEventListener('click', toggleEye)
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<i class="fas fa-exclamation-triangle"></i> Alert
+<i class="fas fa-check-circle"></i> Success
+<i class="fas fa-bomb"></i> Error
+<i class="fas fa-info-circle"></i> info
+<i class="fas fa-spinner"></i> load spinner
+<i class="fas fa-comment-dots"></i> defaul
